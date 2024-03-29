@@ -18,4 +18,28 @@ Pada praktikum ini, Anda akan mempelajari cara menggunakan `context` dengan diak
 
 - `Menggunakan Prop untuk Menentukan Ukuran Heading`. Komponen Heading menerima prop level yang digunakan untuk menentukan ukuran teks heading sesuai dengan level yang diberikan.
 
+## Soal 2
+#### Capture hasilnya dan buatlah laporan di README.md. Jelaskan apa yang telah Anda pelajari dan bagaimana tampilannya saat ini?
+#### Jika terjadi error, silakan perbaiki, Mengapa hal itu bisa terjadi? Jelaskan!
+
+![Screenshot P1](assets-report/praktikum1soal2a.jpg)
+
+- Error terjadi karena komponen yang diimpor membutuhkan `createContext` yang hanya bekerja pada `komponen klien`, namun belum ada parents yang menggunakan `use client`, sehingga `dianggap komponen server secara default`. Oleh karena itu, perlu ditambahkan `'use client';` pada file yang mengimpor komponen tersebut.
+
+```tsx
+'use client';
+
+import MainPage from "@/components/templates/main_page";
+
+export default function Home() {
+    return <MainPage />;
+}
+```
+
+![Screenshot P1](assets-report/praktikum1soal2b.jpg)
+
+- `useContext adalah sebuah Hook`. Sama seperti `useState` dan `useReducer`, hanya dapat memanggil sebuah Hook secara langsung di dalam komponen React (bukan di dalam pengulangan atau pengkondisian). useContext memberitahu React bahwa komponen `Heading` mau membaca `LevelContext`.
+
+- Sekarang `komponen Heading tidak membutuhkan sebuah prop level`, tidak perlu mengoper level prop ke Heading. Sebagai gantinya Perbarui sehingga Section yang dapat menerimanya.
+
 ---
