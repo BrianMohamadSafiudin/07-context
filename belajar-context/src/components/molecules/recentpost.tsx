@@ -6,8 +6,8 @@ export default function RecentPosts() {
     return (
         <Section2 isFancy = {true}>
             <Heading>Posting Terbaru</Heading>
-            <Post title="Cita Rasa Lisbon" body="...those pasteis de nata!" />
-            <Post title="Bueno Aires dalam irama tango!" body="Saya menyukainya!" />
+            <Post title="Licenses & certifications" body="AWS Academy Graduate - AWS Academy Cloud Architecting" />
+            <Post title="Badan Nasional Sertifikasi Profesi" body="Certified BNSP ( JMP, JWD, JGD )" />
         </Section2>
     );
 }

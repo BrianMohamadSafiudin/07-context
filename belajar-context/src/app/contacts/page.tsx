@@ -1,11 +1,11 @@
 "use client"
 import MyApp from "@/components/atoms/myapp"
-import MainPage from "@/components/templates/main_page"
+import Contacts from "@/components/templates/contacts_page"
 
 export default function Home() {
     return(
     <>
-        <MyApp Component={MainPage} pageProps={undefined} />
+        <MyApp Component={Contacts} pageProps={undefined} />
     </>
     )
 }

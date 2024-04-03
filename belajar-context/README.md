@@ -98,4 +98,21 @@ export default function Post({ title, body }: { title: string, body: string }) {
 
 ![Screenshot P2](assets-report/praktikum2soal4.jpg)
 
-```tsx
+---
+
+# Praktikum 3: Membuat Context Tema Light/Dark
+
+Pada praktikum kali ini melanjutkan project dari praktikum sebelumnya, Anda akan membuat tema web yang bisa diubah menjadi mode light atau dark. Tampilan aplikasi web seperti berikut ini (Anda dapat berkreasi dengan konten dan style yang lain sesuai selera Anda).
+
+## Soal 5
+#### Silakan save semua dan lakukan running di browser Anda. Capture hasilnya dan buatlah laporan di README.md. Tambahkan teks Nama dan NIM pada setiap page routing agar menunjukkan itu hasil kerja Anda sendiri!
+
+1. Apakah toggle button tema sudah berfungsi ? jika belum, silakan perbaiki!
+
+- Tema sudah berfungsi dengan baik. `Ketika tombol toggle ditekan`, tema akan berubah dari light ke dark atau sebaliknya.
+
+![GIF P3](assets-report/praktikum3soal5a.gif)
+
+2. Mengapa ketika refresh atau berpindah halaman tema tidak permanen ? Buatlah menjadi permanen walaupun page sudah direfresh dan pindah halaman!
+
+- Ketika halaman direfresh atau berpindah, tema tidak permanen karena `state tema tidak disimpan`. Untuk membuatnya permanen, dapat menggunakan `localStorage` untuk menyimpan state tema.
