@@ -68,3 +68,34 @@ export default function Section({ children }: { children: any }) {
 - `Menggunakan Context untuk Menentukan Ukuran Heading`. Section menerima children dan menambahkan 1 ke level sebelumnya. Dengan demikian, semua Heading yang berada di dalam Section akan memiliki ukuran yang lebih besar dari Heading yang berada di luar Section.
 
 ---
+
+# Praktikum 2: Membuat Context melewati komponen perantara
+
+Pada praktikum ini, Anda dpat `menyisipkan sebanyak mungkin komponen` di antara komponen yang menyediakan `context` dan `komponen yang menggunakannya`. Ini termasuk komponen bawaan seperti `< div >` dan komponen yang mungkin Anda buat sendiri.
+
+Komponen `Post` yang sama (dengan batas putus-putus) diberikan pada dua tingkat sarang yang berbeda. Perhatikan bahwa `< Heading >` di dalamnya mendapatkan level-nya secara otomatis dari `< Section >` terdekat.
+
+## Soal 4
+#### Capture hasilnya dan buatlah laporan di README.md. Tambahkan teks Nama dan NIM pada bagian komponen Post agar menunjukkan itu hasil kerja Anda!
+
+```tsx
+export default function Post({ title, body }: { title: string, body: string }) {
+    return (
+        <div>
+            <p>Brian Mohamad Safiudin</p>
+            <p><i>NIM : 2141720133</i></p>
+            
+            <Section2 isFancy={true}>
+                <Heading>
+                    {title}
+                </Heading>
+                <p><i>{body}</i></p>
+            </Section2>
+        </div>
+    )
+}
+```
+
+![Screenshot P2](assets-report/praktikum2soal4.jpg)
+
+```tsx
