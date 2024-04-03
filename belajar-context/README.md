@@ -42,4 +42,29 @@ export default function Home() {
 
 - Sekarang `komponen Heading tidak membutuhkan sebuah prop level`, tidak perlu mengoper level prop ke Heading. Sebagai gantinya Perbarui sehingga Section yang dapat menerimanya.
 
+## Soal 3
+#### Capture hasilnya dan buatlah laporan di README.md. Jelaskan apa yang telah Anda pelajari dan bagaimana tampilannya saat ini?
+
+![Screenshot P1](assets-report/praktikum1soal3.jpg)
+
+```tsx
+import { LevelContext } from "@/utilities/context/mycontext";
+import { useContext } from "react";
+
+export default function Section({ children }: { children: any }) {
+    const level = useContext(LevelContext);
+    return (
+        <section className={`section`}>
+            <LevelContext.Provider value={level + 1}>
+                {children}
+            </LevelContext.Provider>
+        </section>
+    );
+}
+```
+
+- `Menggunakan useContext untuk Membaca Context`. useContext adalah sebuah Hook yang memungkinkan Anda menggunakan nilai dari Context tanpa perlu menulis Consumer. useContext akan membaca nilai dari Context yang Anda berikan (dalam kasus ini, LevelContext).
+
+- `Menggunakan Context untuk Menentukan Ukuran Heading`. Section menerima children dan menambahkan 1 ke level sebelumnya. Dengan demikian, semua Heading yang berada di dalam Section akan memiliki ukuran yang lebih besar dari Heading yang berada di luar Section.
+
 ---
